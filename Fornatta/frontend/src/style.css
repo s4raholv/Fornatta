@@ -1,0 +1,101 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+
+  background-color: #ff6200;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.splash-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  animation: aparecer 2s ease;
+}
+
+.logo{
+  width: 320px;
+
+  animation: zoom 2s ease;
+}
+
+.loading{
+  width: 140px;
+  height: 5px;
+
+  margin-top: 40px;
+
+  background: rgba(255,255,255,0.3);
+
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+.loading-bar{
+  width: 40%;
+  height: 100%;
+
+  background: white;
+
+  border-radius: 20px;
+
+  animation: carregar 1.5s infinite;
+}
+
+@keyframes aparecer{
+
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+
+}
+
+@keyframes zoom{
+
+  0%{
+    transform: scale(0.7);
+    opacity: 0;
+  }
+
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+
+}
+
+@keyframes carregar{
+
+  0%{
+    transform: translateX(-100%);
+  }
+
+  100%{
+    transform: translateX(300%);
+  }
+
+}
+
+/* CORREÇÃO: bloco removido por dois motivos:
+   1. @import só é válido no INÍCIO do CSS — no final é ignorado pelo browser.
+   2. A URL estava quebrada (https:fonts... faltando //).
+   A fonte Poppins já é carregada corretamente no LoginScreen.css. */

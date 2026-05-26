@@ -1,0 +1,246 @@
+/* Aqui eu mudei a url, já que estava errada (faltou o "//" dps do https ) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0 auto;
+    /* Mudei um pouquinho a cor do gradiente pra dar efeito, como era a mesma, não possuia diferença */
+    background: linear-gradient(100deg, #f3ddcf, #e8c9b0)
+}
+
+.container {
+    position: relative;
+    width: 850px;
+    height: 550px;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .2);
+    /* 
+        Aqui no overflow, tem que estar com hidden, antes estava vazio.
+        O ::before do .toggle-box que estava jogando a página pra direita ao apertar o botão.
+    */
+    overflow: hidden;
+}
+
+.form-box {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    color: #333;
+    text-align: center;
+    padding: 40px;
+    z-index: 1;
+    transition: .6s ease-in-out 1.2s;
+}
+
+.container.active .form-box {
+    right: 50%;
+}
+
+.form-box.register {
+    visibility: hidden;
+}
+
+.container.active .form-box.register {
+    visibility: visible;
+}
+
+form {
+    width: 100%;
+}
+
+.container h1 {
+    font-size: 36px;
+    margin: -10px 0;
+}
+
+.input-box {
+    position: relative;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 13px 50px 13px 20px;
+    background: #eee;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    /* adicionei mudanças suaves ao selecionar dos botões. */
+    transition: background .2s, box-shadow .2s;
+}
+
+/* adicionei feedback visual ao selecionar os botões, agora muda a cor e tem um pouco de sombra laranja neles. */
+.input-box input:focus {
+    background: #e4e4e4;
+    box-shadow: 0 0 0 2px rgba(255, 119, 36, .35);
+}
+
+.input-box input::placeholder{
+    color: #888;
+    /* mudei o tamanho da fonte, pq 400 não existe ein kkkkk peguei esse valor 14px padrão ó. */
+    font-size: 14px;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.forgot-link {
+    margin: -15px 0 15px;
+}
+
+.forgot-link a{
+    font-size: 14.5px;
+    color: #333;
+    text-decoration: none;
+    /* Adicionei transição de cor também */
+    transition: color .2s;
+}
+
+   /* Mouse em cima = fica laranjaaaa kskksks (mto difícil de fazer tá)*/
+.forgot-link a:hover {
+    color: #ff7724;
+}
+
+.btn {
+    width: 100%;
+    height: 46px;
+    background: #ff7724;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    /* Adicionada para o hover ficar suave*/
+    transition: background .2s, transform .1s;
+}
+
+/* Escurece levemente e sobe 2px. */
+.btn:hover {
+    background: #e8641a;
+    transform: translateY(-2px);
+}
+
+/* Garante que o botão volta ao lugar ao clicar */
+.btn:active {
+    transform: translateY(0);
+}
+
+.container p {
+    font-size: 14.5px;
+    margin: 15px 0;
+}
+
+.social-icons a {
+    display: inline-flex;
+    padding: 9px;
+    border: 3px solid #ccc;
+    border-radius: 15px;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    margin: 0 8px;
+    /* Adicionada para o hover ficar suave. */
+    transition: border-color .2s, color .2s;
+}
+
+/* Os ícones das redes sociais tem efeito agora */
+.social-icons a:hover {
+    border-color: #ff7724;
+    color: #ff7724;
+}
+
+.toggle-box {
+    position: absolute;
+    width:100%;
+    height: 100%;
+}
+
+.toggle-box::before {
+    content: '';
+    position: absolute;
+    left: -250%;
+    width: 300%;
+    height: 100%;
+    /* Alterei o antes "border: 2px solid red;" pra "background: linear-gradient(135deg, #ff7724, #ffb347)".
+       para as cores ficarem logo corretas. */
+    background: linear-gradient(135deg, #ff7724, #ffb347);
+    border-radius: 150px;
+    z-index: 2;
+    transition: 1.8s ease-in-out;
+}
+
+.container.active .toggle-box::before {
+    left: 50%;
+}
+
+.toggle-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transition: .6s ease-in-out;
+}
+
+.toggle-panel.toggle-left {
+    left: 0;
+    transition-delay: 1.2s;
+}
+
+/* Tirei um erro de digitação aqui, tiha uma vígula no lugar do ".", logo fazendo toda essa seção inválida.*/
+.container.active .toggle-panel.toggle-left {
+    left: -50%;
+    transition-delay: .6s;
+}
+
+.toggle-panel.toggle-right {
+    right: -50%;
+    transition-delay: .4s;
+}
+
+.container.active .toggle-panel.toggle-right {
+    right:0;
+    transition-delay: 1.2s;
+}
+
+.toggle-panel p {
+    margin-bottom: 20px;
+}
+
+.toggle-panel .btn {
+    width: 160px;
+    height: 46px;
+    background: #ff7724;
+    border: 2px solid #fff;
+    box-shadow: none;
+}
