@@ -1,0 +1,168 @@
+:root {
+    --verde-profundo: #0c4b16;
+    --verde-card: #12291E;
+    --dourado: #ff7724;
+    --texto-claro: #F4F1EA;
+    --texto-mutado: #A0B0A6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+body {
+    background-color: var(--verde-profundo);
+    color: var(--texto-claro);
+    padding-bottom: 60px;
+}
+
+/* --- HEADER --- */
+header {
+    text-align: center;
+    padding: 50px 20px 30px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.brand-title {
+    font-size: 2.8rem;
+    letter-spacing: 6px;
+    color: var(--texto-claro);
+    font-weight: 400;
+}
+
+.brand-subtitle {
+    font-size: 1.1rem;
+    color: var(--dourado);
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.menu-intro {
+    font-style: italic;
+    color: var(--texto-mutado);
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+/* --- CATEGORIAS --- */
+.categories-nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 40px auto;
+    flex-wrap: wrap;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.category-btn {
+    background: transparent;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    color: var(--dourado);
+    padding: 10px 22px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.category-btn:hover, .category-btn.active {
+    background-color: var(--dourado);
+    color: var(--verde-profundo);
+    border-color: var(--dourado);
+    font-weight: bold;
+}
+
+/* --- CONTAINER DO CARDÁPIO --- */
+.menu-container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- CARDS DOS PRATOS --- */
+.menu-item {
+    background-color: var(--verde-card);
+    border: 1px solid rgba(212, 175, 55, 0.08);
+    border-radius: 8px;
+    display: flex;
+    margin-bottom: 25px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-item.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.item-image {
+    width: 220px;
+    height: 100%;
+    min-height: 160px;
+    object-fit: cover;
+}
+
+.item-details {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 12px;
+}
+
+.item-title {
+    font-size: 1.4rem;
+    color: var(--texto-claro);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.item-price {
+    font-size: 1.3rem;
+    color: var(--dourado);
+    font-weight: bold;
+}
+
+.item-description {
+    font-size: 0.95rem;
+    color: var(--texto-mutado);
+    line-height: 1.6;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-weight: 300;
+}
+
+/* --- RESPONSIVIDADE (TABLETS E TELEMÓVEIS) --- */
+@media (max-width: 650px) {
+    .menu-item {
+        flex-direction: column;
+    }
+    .item-image {
+        width: 100%;
+        height: 220px;
+    }
+    .item-details {
+        padding: 20px;
+    }
+    .brand-title {
+        font-size: 2.2rem;
+    }
+    .category-btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+}

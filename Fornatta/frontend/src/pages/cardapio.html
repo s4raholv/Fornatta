@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cardápio</title>
+    <link rel="stylesheet" href="../CardapioScreen.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="brand-title">FORNATTA</h1>
+      <p class="menu-intro">O verdadeiro sabor da Itália no seu prato</p>
+    </header>
+
+    <nav class="categories-nav">
+      <button class="category-btn active" data-category="todos">Todos</button>
+      <button class="category-btn" data-category="entradas">Entradas</button>
+      <button class="category-btn" data-category="pizzas">Pizzas</button>
+      <button class="category-btn" data-category="bebidas">Bebidas</button>
+      <button class="category-btn" data-category="massas">Massas</button>
+      <button class="category-btn" data-category="dolci">Sobremesas</button>
+    </nav>
+
+    <main class="menu-container">
+      <div class="menu-item" data-item-category="pizzas">
+        <img
+          src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=400"
+          alt="Margherita DOC"
+          class="item-image"
+        />
+        <div class="item-details">
+          <div class="item-header">
+            <h3 class="item-title">Margherita</h3>
+            <span class="item-price">R$72,92</span>
+          </div>
+          <p class="item-description">
+            Molho de tomate San Marzano, mozzarella de búfala fresca, folhas de
+            manjericão gigante e fios de azeite extravirgem d'Amalfi.
+          </p>
+        </div>
+      </div>
+
+      <div class="menu-item" data-item-category="pizzas">
+        <img
+          src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=400"
+          alt="Diavola Premium"
+          class="item-image"
+        />
+        <div class="item-details">
+          <div class="item-header">
+            <h3 class="item-title">Diavola Premium</h3>
+            <span class="item-price">R$89,90</span>
+          </div>
+          <p class="item-description">
+            Molho de tomate artesanal da casa, mozzarella salpicada com orégano
+            fresco, salame picante italiano legítimo e tiras finas de cebola
+            roxa marinada.
+          </p>
+        </div>
+      </div>
+
+      <div class="menu-item" data-item-category="massas">
+        <img
+          src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400"
+          alt="Tagliatelle al Ragù"
+          class="item-image"
+        />
+        <div class="item-details">
+          <div class="item-header">
+            <h3 class="item-title">Tagliatelle al Ragù</h3>
+            <span class="item-price">R$68,90</span>
+          </div>
+          <p class="item-description">
+            Massa fresca longa de fabricação própria, cozida al dente e envolta
+            em nosso tradicional e encorpado ragu de carne bovina, reduzido por
+            6 horas em vinho tinto.
+          </p>
+        </div>
+      </div>
+
+      <div class="menu-item" data-item-category="bebidas">
+        <img
+          src="../assets-images/cardapio.png"
+          alt="Bebida"
+          class="item-image"
+        />
+        <div class="item-details">
+          <div class="item-header">
+            <h3 class="item-title">Rosso della Casa — Riserva 1989</h3>
+            <span class="item-price">R$163,67</span>
+          </div>
+          <p class="item-description">
+            Encorpado, imponente e de alma puramente italiana. Este tinto de
+            safra histórica estagiou pacientemente em barris de carvalho,
+            revelando notas profundas de frutos vermelhos maduros, especiarias
+            doces e um sutil toque de tabaco. Possui taninos macios e um final
+            persistente na boca.
+          </p>
+        </div>
+      </div>
+
+      <div class="menu-item" data-item-category="entradas">
+        <img
+          src="https://images.unsplash.com/photo-1572656631137-7935297eff55?w=400"
+          alt="Bruschetta al Pomodoro"
+          class="item-image"
+        />
+        <div class="item-details">
+          <div class="item-header">
+            <h3 class="item-title">Bruschetta al Pomodoro</h3>
+            <span class="item-price">R$14,50</span>
+          </div>
+          <p class="item-description">
+            Fatias de pão sourdough tostadas no forno a lenha, tomates cereja
+            marinados no azeite de oliva extravirgem, alho e folhas frescas de
+            manjericão.
+          </p>
+        </div>
+      </div>
+
+      <div class="menu-item" data-item-category="dolci">
+        <img
+          src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400"
+          alt="Tiramisù Tradizionale"
+          class="item-image"
+        />
+        <div class="item-details">
+          <div class="item-header">
+            <h3 class="item-title">Tiramisù Tradizionale</h3>
+            <span class="item-price">R$16,50</span>
+          </div>
+          <p class="item-description">
+            Biscoitos de champanhe embebidos em café espresso premium, creme
+            leve à base de queijo mascarpone fresco e cacau em pó 100%.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <script src="../scripts/Cardapio.script.js"></script>
+  </body>
+</html>
