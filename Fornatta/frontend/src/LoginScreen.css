@@ -13,9 +13,9 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    margin: 0 auto;
-    /* Mudei um pouquinho a cor do gradiente pra dar efeito, como era a mesma, não possuia diferença */
-    background: linear-gradient(100deg, #f3ddcf, #e8c9b0)
+    background-image: url(assets-images/png.fundo.png);
+    background-size: 500px;
+    background-repeat: repeat;   
 }
 
 .container {
@@ -25,10 +25,6 @@ body {
     background: #fff;
     border-radius: 30px;
     box-shadow: 0 0 30px rgba(0, 0, 0, .2);
-    /* 
-        Aqui no overflow, tem que estar com hidden, antes estava vazio.
-        O ::before do .toggle-box que estava jogando a página pra direita ao apertar o botão.
-    */
     overflow: hidden;
 }
 
@@ -83,11 +79,9 @@ form {
     font-size: 16px;
     color: #333;
     font-weight: 500;
-    /* adicionei mudanças suaves ao selecionar dos botões. */
     transition: background .2s, box-shadow .2s;
 }
 
-/* adicionei feedback visual ao selecionar os botões, agora muda a cor e tem um pouco de sombra laranja neles. */
 .input-box input:focus {
     background: #e4e4e4;
     box-shadow: 0 0 0 2px rgba(255, 119, 36, .35);
@@ -95,7 +89,6 @@ form {
 
 .input-box input::placeholder{
     color: #888;
-    /* mudei o tamanho da fonte, pq 400 não existe ein kkkkk peguei esse valor 14px padrão ó. */
     font-size: 14px;
 }
 
@@ -115,11 +108,9 @@ form {
     font-size: 14.5px;
     color: #333;
     text-decoration: none;
-    /* Adicionei transição de cor também */
     transition: color .2s;
 }
 
-   /* Mouse em cima = fica laranjaaaa kskksks (mto difícil de fazer tá)*/
 .forgot-link a:hover {
     color: #ff7724;
 }
@@ -135,17 +126,14 @@ form {
     font-size: 16px;
     color: #fff;
     font-weight: 600;
-    /* Adicionada para o hover ficar suave*/
     transition: background .2s, transform .1s;
 }
 
-/* Escurece levemente e sobe 2px. */
 .btn:hover {
     background: #e8641a;
     transform: translateY(-2px);
 }
 
-/* Garante que o botão volta ao lugar ao clicar */
 .btn:active {
     transform: translateY(0);
 }
@@ -164,11 +152,9 @@ form {
     color: #333;
     text-decoration: none;
     margin: 0 8px;
-    /* Adicionada para o hover ficar suave. */
     transition: border-color .2s, color .2s;
 }
 
-/* Os ícones das redes sociais tem efeito agora */
 .social-icons a:hover {
     border-color: #ff7724;
     color: #ff7724;
@@ -186,8 +172,6 @@ form {
     left: -250%;
     width: 300%;
     height: 100%;
-    /* Alterei o antes "border: 2px solid red;" pra "background: linear-gradient(135deg, #ff7724, #ffb347)".
-       para as cores ficarem logo corretas. */
     background: linear-gradient(135deg, #ff7724, #ffb347);
     border-radius: 150px;
     z-index: 2;
@@ -217,7 +201,6 @@ form {
     transition-delay: 1.2s;
 }
 
-/* Tirei um erro de digitação aqui, tiha uma vígula no lugar do ".", logo fazendo toda essa seção inválida.*/
 .container.active .toggle-panel.toggle-left {
     left: -50%;
     transition-delay: .6s;

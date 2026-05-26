@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fornatta Amalfi - Delivery</title>
+    <link rel="stylesheet" href="../DeliveryScreen.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+                <img src="../assets-images/logo2.png" alt="Logo">
+            </div>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#" class="active">Menu</a>
+            <a href="#">Reservas</a>
+            <a href="#">Sobre Nós</a>
+            <a href="#">Contato</a>
+        </nav>
+        <div class="nav-actions">
+            <button class="btn-top">Fazer Pedido</button>
+            <div class="user-icon"><i class="fa-regular fa-user"></i></div>
+            <div class="cart-icon-top" id="open-cart-mobile">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count">3</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        
+        <main class="content-area">
+            
+            <section class="hero-section">
+                <h1>DELIVERY - Traga o Sabor da Itália para Sua Casa</h1>
+                <div class="delivery-search">
+                    <label for="address-input">Entrega da Área</label>
+                    <div class="search-box">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <input type="text" id="address-input" value="Rua Rode Roses 55m, Belém">
+                        <button class="btn-orange">VERIFICAR ÁREA</button>
+                    </div>
+                </div>
+            </section>
+
+            <h2 class="section-title">Menu Delivery</h2>
+
+            <div class="menu-layout">
+                <aside class="categories-sidebar">
+                    <button class="category-item active"><i class="fa-solid fa-bowl-food"></i> Pasta</button>
+                    <button class="category-item"><i class="fa-solid fa-pizza-slice"></i> Pizza</button>
+                    <button class="category-item"><i class="fa-solid fa-wine-glass"></i> Vinhos</button>
+                    <button class="category-item"><i class="fa-solid fa-cake-candles"></i> Sobremesas</button>
+                    <button class="category-item badge-new"><i class="fa-solid fa-cheese"></i> Entradas Bruschetta</button>
+                    <button class="category-item"><i class="fa-solid fa-wine-bottle"></i> Bebidas Não Alcoólicas</button>
+                </aside>
+
+                <section class="products-grid">
+                    <div class="product-card" data-id="1" data-name="Tagliatelle al Ragù" data-price="4.50">
+                        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400" alt="Tagliatelle">
+                        <div class="product-info">
+                            <h3>Tagliatelle al Ragù</h3>
+                            <p>Delicioso com molhos frescos, massas selecionadas e vinho.</p>
+                            <div class="product-footer">
+                                <span class="price">€4,50</span>
+                                <button class="btn-add">Adicionar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-id="2" data-name="Lasagna Bolognese" data-price="14.00">
+                        <img src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=400" alt="Lasagna">
+                        <div class="product-info">
+                            <h3>Lasagna Bolognese</h3>
+                            <p>Clássica bolonhesa com massa artesanal e muito queijo derretido.</p>
+                            <div class="product-footer">
+                                <span class="price">€14,00</span>
+                                <button class="btn-add">Adicionar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-id="3" data-name="Risotto di Mare" data-price="24.00">
+                        <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=400" alt="Risotto">
+                        <div class="product-info">
+                            <h3>Risotto di Mare</h3>
+                            <p>Arroz arbóreo cremoso com frutos do mar selecionados e frescos.</p>
+                            <div class="product-footer">
+                                <span class="price">€24,00</span>
+                                <button class="btn-add">Adicionar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card" data-id="4" data-name="Pizza Margherita" data-price="18.50">
+                        <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=400" alt="Pizza">
+                        <div class="product-info">
+                            <h3>Pizza Margherita</h3>
+                            <p>Molho de tomate artesanal, muçarela de búfala e manjericão fresco.</p>
+                            <div class="product-footer">
+                                <span class="price">€18,50</span>
+                                <button class="btn-add">Adicionar</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <aside class="cart-sidebar" id="cart-sidebar">
+            <div class="cart-header">
+                <h2>Carrinho de Pedido</h2>
+                <button id="close-cart-mobile">&times;</button>
+            </div>
+
+            <div class="cart-items" id="cart-items-container">
+                </div>
+
+            <div class="delivery-options">
+                <h3>Opções de entrega:</h3>
+                <label class="radio-option">
+                    <input type="radio" name="delivery-type" checked value="4.50">
+                    <span class="radio-custom"></span>
+                    <div>
+                        <strong>ENTREGA PADRÃO (€4,50)</strong>
+                        <small>ou</small>
+                    </div>
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="delivery-type" value="0">
+                    <span class="radio-custom"></span>
+                    <div>
+                        <strong>AGENDAR ENTREGA</strong>
+                        <select class="time-select">
+                            <option>Tempo de hoje: 18:00</option>
+                            <option>Tempo de hoje: 19:00</option>
+                            <option>Tempo de hoje: 20:00</option>
+                        </select>
+                    </div>
+                </label>
+            </div>
+
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal-val">€0,00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Custo de Entrega</span>
+                    <span id="delivery-val">€4,50</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total do Pedido</span>
+                    <span id="total-val">€0,00</span>
+                </div>
+            </div>
+
+            <div class="coupon-section">
+                <input type="text" placeholder="APLICAR CUPOM">
+            </div>
+
+            <button class="btn-checkout">FINALIZAR PEDIDO</button>
+        </aside>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-logo">
+            <h3>FORNATTA</h3>
+        </div>
+        <div class="footer-info">
+            <p><i class="fa-solid fa-location-dot"></i> Rus, Rode Roses 55m, Belém</p>
+            <p><i class="fa-regular fa-clock"></i> Seg - Dom: 8:00am - 8:00pm</p>
+        </div>
+        <div class="footer-socials">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 KOTONATTA AMALFI. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/DeliveryScript.js"></script>
+</body>
+</html>
