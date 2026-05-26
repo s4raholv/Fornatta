@@ -7,10 +7,15 @@
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-image: url(assets-images/fundo.home.png);
   background-size: 500px;
   background-repeat: repeat;
+  overflow-x: hidden;
 }
 
 /* NAVBAR */
@@ -32,6 +37,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 .logo img {
@@ -42,16 +48,14 @@ header {
   display: flex;
   gap: 25px;
   list-style: none;
-  font-size: 14.5px;
-  text-decoration: none;
-  transition: color 0.2s;
 }
 
 .nav-links a {
   font-size: 14.5px;
   color: #fff;
   text-decoration: none;
-  transition: color 0.1s;
+  transition: 0.2s;
+  font-weight: 500;
 }
 
 .nav-links a:hover {
@@ -72,13 +76,22 @@ header {
   border-radius: 30px;
   cursor: pointer;
   font-weight: 600;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.pedido-btn:hover {
+  transform: scale(1.05);
+  background: #ff7f2f;
 }
 
 .icons {
   display: flex;
   gap: 15px;
   color: white;
-  font-size: 20px;
+  font-size: 22px;
+  cursor: pointer;
 }
 
 /* HERO */
@@ -130,6 +143,16 @@ header {
   border-radius: 40px;
   font-weight: 600;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-buttons a {
+  text-decoration: none;
+}
+
+.orange-btn:hover {
+  transform: translateY(-3px);
+  background: #ff7f2f;
 }
 
 .dark-btn {
@@ -139,6 +162,12 @@ header {
   padding: 15px 30px;
   border-radius: 40px;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.dark-btn:hover {
+  background: white;
+  color: #0c4b16;
 }
 
 /* CATEGORIAS */
@@ -151,6 +180,7 @@ header {
 .categorias h2 {
   margin-bottom: 40px;
   font-size: 40px;
+  color: #0c4b16;
 }
 
 .categoria-container {
@@ -165,17 +195,13 @@ header {
   height: 170px;
   background: #f97316;
   border-radius: 25px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 15px;
-
   color: white;
-
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-
   transition: 0.3s;
 }
 
@@ -185,6 +211,11 @@ header {
 
 .categoria-card i {
   font-size: 45px;
+}
+
+.categoria-card span {
+  font-size: 18px;
+  font-weight: 600;
 }
 
 /* RESTAURANTE */
@@ -197,6 +228,7 @@ header {
   text-align: center;
   margin-bottom: 50px;
   font-size: 40px;
+  color: #0c4b16;
 }
 
 .restaurante-content {
@@ -208,7 +240,6 @@ header {
 
 .galeria {
   flex: 1;
-
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
@@ -219,6 +250,11 @@ header {
   height: 220px;
   object-fit: cover;
   border-radius: 20px;
+  transition: 0.3s;
+}
+
+.galeria img:hover {
+  transform: scale(1.03);
 }
 
 .restaurante-text {
@@ -228,12 +264,30 @@ header {
 .restaurante-text h3 {
   font-size: 35px;
   margin-bottom: 20px;
+  color: #0c4b16;
 }
 
 .restaurante-text p {
   font-size: 18px;
   color: #555;
   margin-bottom: 20px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.info p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info i {
+  color: #f97316;
+  font-size: 22px;
 }
 
 /* DESTAQUES */
@@ -246,6 +300,7 @@ header {
   text-align: center;
   font-size: 40px;
   margin-bottom: 50px;
+  color: #0c4b16;
 }
 
 .foods {
@@ -260,9 +315,7 @@ header {
   background: white;
   border-radius: 25px;
   overflow: hidden;
-
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-
   transition: 0.3s;
 }
 
@@ -282,6 +335,7 @@ header {
 
 .food-content h3 {
   margin-bottom: 10px;
+  color: #0c4b16;
 }
 
 .food-content p {
@@ -298,6 +352,7 @@ header {
 .food-bottom span {
   font-size: 22px;
   font-weight: bold;
+  color: #0c4b16;
 }
 
 .food-bottom button {
@@ -307,6 +362,11 @@ header {
   padding: 10px 20px;
   border-radius: 30px;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.food-bottom button:hover {
+  background: #ff7f2f;
 }
 
 /* FOOTER */
@@ -320,32 +380,15 @@ footer {
 
 footer img {
   width: 180px;
-  margin-bottom: 30px;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 30px;
-}
-
-.footer-links a {
-  font-size: 14.5px;
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.1s;
-}
-
-.footer-links a:hover {
-  color: #ff7724;
+  margin-bottom: 20px;
 }
 
 .contato-info {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 25px;
+  gap: 12px;
+
+  margin-bottom: 30px;
 }
 
 .contato-info p {
@@ -356,12 +399,26 @@ footer img {
   color: #f1f1f1;
 }
 
+.contato-info i {
+  color: #f97316;
+}
+
 .footer-icons {
   display: flex;
   justify-content: center;
   gap: 20px;
-  font-size: 24px;
+  font-size: 26px;
   margin-bottom: 30px;
+}
+
+.footer-icons a {
+  color: white;
+  transition: 0.3s;
+}
+
+.footer-icons a:hover {
+  color: #f97316;
+  transform: translateY(-3px);
 }
 
 /* RESPONSIVO */
@@ -370,11 +427,18 @@ footer img {
   .navbar {
     flex-direction: column;
     gap: 20px;
+    padding: 20px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .hero {
     justify-content: center;
     text-align: center;
+
     padding: 20px;
   }
 
@@ -384,6 +448,7 @@ footer img {
 
   .hero-buttons {
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .restaurante-content {
@@ -392,5 +457,9 @@ footer img {
 
   .galeria {
     grid-template-columns: 1fr;
+  }
+
+  .food-card {
+    width: 100%;
   }
 }

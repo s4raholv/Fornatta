@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Login</title>
+
+    <link rel="icon" type="image/jpeg" href="../assets-images/logo.jpeg" />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../LoginScreen.css" />
+  </head>
+
+  <body>
+    <div class="container">
+
+      <!-- LOGIN -->
+      <div class="form-box login">
+        <form>
+
+          <h1>Login</h1>
+
+          <div class="input-box">
+            <input
+              type="email"
+              placeholder="Email"
+              required
+            />
+
+            <i class="bx bxs-envelope"></i>
+          </div>
+
+          <div class="input-box">
+            <input
+              type="password"
+              placeholder="Senha"
+              required
+            />
+
+            <i class="bx bxs-lock-alt"></i>
+          </div>
+
+          <div class="forgot-link">
+            <a href="#">Esqueceu a senha?</a>
+          </div>
+
+          <!-- BOTÃO LARANJA -->
+          <button
+            type="button"
+            class="btn"
+            onclick="window.location.href='home.html'"
+          >
+            Login
+          </button>
+
+          <p>ou faça login com plataformas sociais</p>
+
+          <div class="social-icons">
+            <a href="https://accounts.google.com" target="_blank">
+              <i class="bx bxl-google"></i>
+            </a>
+
+            <a href="https://www.facebook.com" target="_blank">
+              <i class="bx bxl-facebook"></i>
+            </a>
+
+            <a href="https://github.com/login" target="_blank">
+              <i class="bx bxl-github"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/login" target="_blank">
+              <i class="bx bxl-linkedin"></i>
+            </a>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- REGISTRO -->
+      <div class="form-box register">
+        <form>
+
+          <h1>Registro</h1>
+
+          <div class="input-box">
+            <input
+              type="text"
+              placeholder="Usuário"
+              required
+            />
+
+            <i class="bx bxs-user"></i>
+          </div>
+
+          <div class="input-box">
+            <input
+              type="email"
+              placeholder="Email"
+              required
+            />
+
+            <i class="bx bxs-envelope"></i>
+          </div>
+
+          <div class="input-box">
+            <input
+              type="password"
+              placeholder="Senha"
+              required
+            />
+
+            <i class="bx bxs-lock-alt"></i>
+          </div>
+
+          <button
+            type="button"
+            class="btn"
+            onclick="window.location.href='/pages/HOME.html'"
+          >
+            Registrar
+          </button>
+
+          <p>ou registre-se com plataformas sociais</p>
+
+          <div class="social-icons">
+            <a href="https://accounts.google.com" target="_blank">
+              <i class="bx bxl-google"></i>
+            </a>
+
+            <a href="https://www.facebook.com" target="_blank">
+              <i class="bx bxl-facebook"></i>
+            </a>
+
+            <a href="https://github.com/login" target="_blank">
+              <i class="bx bxl-github"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/login" target="_blank">
+              <i class="bx bxl-linkedin"></i>
+            </a>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- TOGGLE -->
+      <div class="toggle-box">
+
+        <div class="toggle-panel toggle-left">
+          <h1>Bem-vindo!</h1>
+
+          <p>Não tem uma conta?</p>
+
+          <button class="btn registerBtn" type="button">
+            Registrar
+          </button>
+        </div>
+
+        <div class="toggle-panel toggle-right">
+          <h1>Bem-vindo de volta!</h1>
+
+          <p>Já tem uma conta?</p>
+
+          <button class="btn loginBtn" type="button">
+            Login
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <script>
+      const container = document.querySelector(".container");
+      const registerBtn = document.querySelector(".registerBtn");
+      const loginBtn = document.querySelector(".loginBtn");
+
+      registerBtn.addEventListener("click", () => {
+        container.classList.add("active");
+      });
+
+      loginBtn.addEventListener("click", () => {
+        container.classList.remove("active");
+      });
+    </script>
+
+  </body>
+</html>

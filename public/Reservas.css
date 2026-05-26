@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background-image: url(assets-images/fundo.home.png);
+  background-size: 500px;
+  background-repeat: repeat;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+
+header{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.navbar{
+  width: 90%;
+  margin: 25px auto;
+
+  background: #0c4b16;
+
+  border-radius: 20px;
+
+  padding: 15px 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 5px 20px rgba(0,0,0,.15);
+}
+
+.logo img{
+  width: 150px;
+}
+
+.nav-links{
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links a{
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+
+  transition: .2s;
+}
+
+.nav-links a:hover{
+  color: #ff7724;
+}
+
+/* HERO */
+
+.reservas-hero{
+  width: 100%;
+  height: 60vh;
+
+  background:
+  linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+  url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1400");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  color: white;
+}
+
+.hero-content h1{
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.hero-content p{
+  font-size: 18px;
+  color: #e5e5e5;
+}
+
+/* RESERVA */
+
+.reserva-section{
+  padding: 100px 10%;
+}
+
+.reserva-container{
+  background: white;
+
+  border-radius: 30px;
+
+  padding: 50px;
+
+  display: flex;
+  gap: 50px;
+
+  align-items: center;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+
+  flex-wrap: wrap;
+}
+
+.reserva-text{
+  flex: 1;
+}
+
+.reserva-text h2{
+  font-size: 42px;
+  color: #0c4b16;
+  margin-bottom: 20px;
+}
+
+.reserva-text p{
+  font-size: 17px;
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.7;
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.info p{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info i{
+  color: #f97316;
+  font-size: 22px;
+}
+
+/* FORM */
+
+.reserva-form{
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group{
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label{
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #0c4b16;
+}
+
+.input-group input,
+.input-group select{
+  padding: 15px;
+
+  border-radius: 12px;
+
+  border: 1px solid #dcdcdc;
+
+  outline: none;
+
+  font-size: 15px;
+
+  transition: .2s;
+}
+
+.input-group input:focus,
+.input-group select:focus{
+  border-color: #f97316;
+}
+
+.reserva-btn{
+  margin-top: 10px;
+
+  background: #f97316;
+
+  color: white;
+
+  border: none;
+
+  padding: 16px;
+
+  border-radius: 40px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+.reserva-btn:hover{
+  background: #ff7f2f;
+  transform: translateY(-3px);
+}
+
+/* FOOTER */
+
+footer{
+  background: #0c4b16;
+
+  padding: 60px 10%;
+
+  text-align: center;
+
+  color: white;
+}
+
+footer img{
+  width: 180px;
+  margin-bottom: 25px;
+}
+
+.contato-info{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  margin-bottom: 30px;
+}
+
+.contato-info p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.contato-info i{
+  color: #f97316;
+}
+
+.footer-icons{
+  display: flex;
+  justify-content: center;
+
+  gap: 20px;
+
+  font-size: 26px;
+
+  margin-bottom: 30px;
+}
+
+.footer-icons a{
+  color: white;
+  transition: .3s;
+}
+
+.footer-icons a:hover{
+  color: #f97316;
+  transform: translateY(-3px);
+}
+
+/* RESPONSIVO */
+
+@media(max-width: 900px){
+
+  .navbar{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-content h1{
+    font-size: 42px;
+  }
+
+  .reserva-container{
+    padding: 30px;
+  }
+
+  .reserva-text h2{
+    font-size: 34px;
+  }
+
+}
